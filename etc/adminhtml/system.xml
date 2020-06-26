@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<section id="adminfontsize" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+			<label>Custom Admin Style Settings</label>
+			<tab>neonconfig</tab>
+			<resource>Neon_AdminFontSize::config_neon_adminfontsize</resource>
+			<group id="fontsetting" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>Style Settings</label>
+         <field id="enable_custom_style" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Enable</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+        
+         <field id="user" translate="label" sortOrder="550" showInDefault="1" showInWebsite="1"
+                       showInStore="0">
+           <label>Users</label>
+            <backend_model>Neon\AdminFontSize\Model\Config\Backend\ArraySerialized</backend_model>
+            <source_model>Neon\AdminFontSize\Model\Adminhtml\Source\Attributes\Select</source_model>
+            <frontend_model>Neon\AdminFontSize\Block\Adminhtml\Config\CustomDataFields</frontend_model>
+         </field>
+        
+			</group>
+		</section>
+	</system>
+</config>
+		
